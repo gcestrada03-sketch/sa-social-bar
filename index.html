@@ -130,6 +130,8 @@ textarea{min-height:96px;resize:vertical}
 form .btn-gold{width:100%;margin-top:22px;padding:16px}
 .out{display:none;margin-top:18px;border:1px solid var(--gold);padding:16px;background:#0c0a07}
 .out.show{display:block}
+.sendhint{font-family:Cinzel,serif;font-size:12px;letter-spacing:.08em;color:var(--gold-2);border-bottom:1px solid var(--line-soft);padding-bottom:12px;margin-bottom:12px;line-height:1.6}
+.sendhint b{color:#fff}
 .out pre{white-space:pre-wrap;font-family:"Cormorant Garamond",serif;font-size:16.5px;color:var(--text)}
 .out .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .out .acts .btn-outline{padding:12px 8px;font-size:11px;letter-spacing:.12em}
@@ -253,6 +255,7 @@ footer .fine{color:#7d7262;font-size:13.5px;margin-top:6px}
         <button class="btn-gold" type="submit" data-i="f_submit">Prepare my quote request</button>
         <div class="err" id="err" data-i="f_err">Please add your name and phone.</div>
         <div class="out" id="out">
+          <p class="sendhint" data-i="send_hint">Last step: tap the button below. Your texting app will open with your request ready. Just press <b>Send</b>.</p>
           <pre id="msg"></pre>
           <div class="acts">
             <a class="btn-gold" id="smsBtn" href="#" data-i="send_text">Send by text</a>
@@ -293,8 +296,8 @@ const T = {
   pkgs_title:"Packages",addons:"Add-ons",how_title:"How it works",book_title:"Book your event",book_k:"Book your event",
   book_script:"Great drinks,<br>better moments",f_name:"Name",f_phone:"Phone",f_date:"Event date",f_guests:"Guests",f_type:"Event type",
   f_pkg:"Package",f_hours:"Hours of service",f_city:"City / Venue",f_notes:"Favorite drinks or details",f_submit:"Prepare my quote request",
-  f_err:"Please add your name and phone.",send_text:"Text both numbers",copy:"Copy",copied:"Copied",
-  out_note:"Your request goes to both of our numbers in one group text. Or send it to just one number, or copy it and text it to (302) 333-0346 and (302) 513-3677.",
+  f_err:"Please add your name and phone.",send_text:"Text both numbers",send_hint:"Last step: tap the button below. Your texting app will open with your request ready. Just press <b>Send</b>.",copy:"Copy",copied:"Copied",
+  out_note:"Your request isn't sent until you press Send in your texting app. It goes to both of our numbers in one group text. Or send it to just one number, or copy it and text it to (302) 333-0346 and (302) 513-3677.",
   foot_script:"Signature drinks, unforgettable moments",fine:"We serve alcohol only to guests 21+. Please drink responsibly.",
   priced:"Priced by guests and hours",get_quote:"Get quote",popular:"Most booked",
   msg_hi:"Hi S&A Social Bar! I'd like a quote:",m_name:"Name",m_phone:"Phone",m_date:"Date",m_guests:"Guests",m_type:"Event",m_pkg:"Package",m_hours:"Hours",m_city:"City / venue",m_notes:"Details",tbd:"TBD"},
@@ -305,8 +308,8 @@ const T = {
   pkgs_title:"Paquetes",addons:"Extras",how_title:"Cómo funciona",book_title:"Reserva tu evento",book_k:"Reserva tu evento",
   book_script:"Buenos tragos,<br>mejores momentos",f_name:"Nombre",f_phone:"Teléfono",f_date:"Fecha del evento",f_guests:"Invitados",f_type:"Tipo de evento",
   f_pkg:"Paquete",f_hours:"Horas de servicio",f_city:"Ciudad / Lugar",f_notes:"Bebidas favoritas o detalles",f_submit:"Preparar mi cotización",
-  f_err:"Agrega tu nombre y teléfono, por favor.",send_text:"Enviar a ambos números",copy:"Copiar",copied:"Copiado",
-  out_note:"Tu solicitud llega a nuestros dos números en un solo mensaje de grupo. También puedes enviarla a un solo número, o copiarla y enviarla al (302) 333-0346 y (302) 513-3677.",
+  f_err:"Agrega tu nombre y teléfono, por favor.",send_text:"Enviar a ambos números",send_hint:"Último paso: toca el botón de abajo. Tu app de mensajes se abrirá con tu solicitud lista. Solo presiona <b>Enviar</b>.",copy:"Copiar",copied:"Copiado",
+  out_note:"Tu solicitud no se envía hasta que presiones Enviar en tu app de mensajes. Llega a nuestros dos números en un solo mensaje de grupo. También puedes enviarla a un solo número, o copiarla y enviarla al (302) 333-0346 y (302) 513-3677.",
   foot_script:"Bebidas de autor, momentos únicos",fine:"Servimos alcohol solo a mayores de 21 años. Bebe con responsabilidad.",
   priced:"Precio según invitados y horas",get_quote:"Cotizar",popular:"El más reservado",
   msg_hi:"¡Hola S&A Social Bar! Quisiera una cotización:",m_name:"Nombre",m_phone:"Teléfono",m_date:"Fecha",m_guests:"Invitados",m_type:"Evento",m_pkg:"Paquete",m_hours:"Horas",m_city:"Ciudad / lugar",m_notes:"Detalles",tbd:"Por definir"}
